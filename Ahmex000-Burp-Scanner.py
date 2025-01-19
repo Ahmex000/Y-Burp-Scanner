@@ -162,10 +162,18 @@ KEYWORDS = {
     "datadog_api_key=[0-9a-zA-Z]{32}": "High",  # Datadog API Key
     "newrelic_api_key=[0-9a-zA-Z]{40}": "High",  # New Relic API Key
     "pagerduty_api_key=[0-9a-zA-Z]{20}": "High",  # PagerDuty API Key
-    "api_key": "High",
+    "api_key\"": "High",
+    "api_key:": "High",
+    "api_key :": "High",
     "api_secret": "High",
     "access_token": "High",
+    "access_token\"": "High",
+    "access_token:": "High",
+    "access_token :": "High",
     "refresh_token": "High",
+    "refresh_token\"": "High",
+    "refresh_token:": "High",
+    "refresh_token :": "High",
     "oauth_token": "High",
     "bearer_token": "High",
     "client_secret": "High",
@@ -235,8 +243,8 @@ KEYWORDS = {
     "\"client_secret\":\"[^\"]+\"": "High",  # البحث عن "client_secret":"أي قيمة"
     # باقي الكلمات المهمة
     # "secret": "High",
-    r"(?<=\w|\d|[-_])private|\bprivate(?=\w|\d|[-_])": "Medium",
-    "AIza": "High",  # Google API Key
+    # r"(?<=\w|\d|[-_])private|\bprivate(?=\w|\d|[-_])": "Medium",
+    # "AIza": "High",  # Google API Key
     # "AC[a-zA-Z0-9]{32}": "High",  # Twilio Account SID
     "key-[0-9a-zA-Z]{32}": "High",  # Mailgun API Key
     "amzn\\.mws\\.[0-9a-zA-Z._%+-]{30,50}": "High",  # Amazon MWS Auth Token
@@ -432,16 +440,18 @@ KEYWORDS = {
     "X-Rollbar-Access-Token": "High",
     "bucketingStrategy": "Medium",
     "Access-Token": "High",
-    "AccessToken": "High",
+    "AccessToken\"": "High",
     "GoogleMapsAPIKey": "High",
     r"(?<=\w|\d|[-_\"':])ProjectConfig(?=\w|\d|[-_\"':=])": "Medium",
     "RECORD_STICKY_BUCKETING_FEATURE": "Medium",
     "RETOKEN": "High",
     "SEGMENT_TRIGGER_EXPOSURE_BUCKET": "Medium",
     "addParamsAndAccessTokenToPath": "Medium",
-    "api-key": "High",
+    "api-key\"": "High",
+    "api-key:": "High",
+    "api-key :": "High",
     "apiKey": "High",
-    "authToken": "High",
+    "authToken=": "High",
     "auth-Token": "High",
     "apiToken": "High",
     "clientSecret": "High",
@@ -615,23 +625,29 @@ KEYWORDS = {
     "wisdom_api_token": "High",
     "psychology_api_key": "High",
     "mind_api_token": "High",
+    "braze_key": "Medium",
     "behavior_api_token": "High",
+     '''
      ".xls": "High",
     ".xml": "High",
     ".xlsx": "High",
     ".json": "High",
     ".pdf": "High",
+    '''
     ".sql": "High",
+    '''
     ".doc": "High",
     ".docx": "High",
-    ".pptx": "High",
+    ".rar": "High",
+    ".7z": "High",
     ".txt": "High",
     ".zip": "High",
+     ".zip": "High",
+    '''
+    ".pptx": "High",
     ".tar.gz": "High",
     ".tgz": "High",
-    ".bak": "High",
-    ".7z": "High",
-    ".rar": "High"
+    ".bak": "High"
     }
 
 class CustomScanIssue(IScanIssue):
