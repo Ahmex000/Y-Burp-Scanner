@@ -431,7 +431,6 @@ KEYWORDS = {
     # folllowing wordkeys added in 18-01-2025 / 11:42
     "X-Rollbar-Access-Token": "High",
     "bucketingStrategy": "Medium",
-    "API-KEY": "High",
     "Access-Token": "High",
     "AccessToken": "High",
     "GoogleMapsAPIKey": "High",
@@ -616,7 +615,23 @@ KEYWORDS = {
     "wisdom_api_token": "High",
     "psychology_api_key": "High",
     "mind_api_token": "High",
-    "behavior_api_token": "High"
+    "behavior_api_token": "High",
+     ".xls": "High",
+    ".xml": "High",
+    ".xlsx": "High",
+    ".json": "High",
+    ".pdf": "High",
+    ".sql": "High",
+    ".doc": "High",
+    ".docx": "High",
+    ".pptx": "High",
+    ".txt": "High",
+    ".zip": "High",
+    ".tar.gz": "High",
+    ".tgz": "High",
+    ".bak": "High",
+    ".7z": "High",
+    ".rar": "High"
     }
 
 class CustomScanIssue(IScanIssue):
@@ -676,6 +691,7 @@ class CustomScanIssue(IScanIssue):
 #    // this searches to Slack leaks data due false positive alerts ]
 #----------
 # deleted "password" key word
+#
 #
 #
 #
