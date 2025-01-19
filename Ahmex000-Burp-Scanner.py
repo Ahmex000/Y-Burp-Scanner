@@ -9,7 +9,7 @@ class BurpExtender(IBurpExtender, IHttpListener):
     def registerExtenderCallbacks(self, callbacks):
         self._callbacks = callbacks
         self._helpers = callbacks.getHelpers()
-        self._callbacks.setExtensionName("Auto Sensitive Keyword Scanner")
+        self._callbacks.setExtensionName("Ahmex000 Burp Scanner")
         
         # تسجيل Listener للاستماع إلى جميع الطلبات والاستجابات
         self._callbacks.registerHttpListener(self)
