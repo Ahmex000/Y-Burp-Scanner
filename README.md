@@ -59,3 +59,10 @@ Feel free to submit pull requests to enhance the functionality, add new features
 ### Disclaimer
 This extension is a tool to assist penetration testers in identifying potential data leaks. It is the responsibility of the tester to ensure compliance with legal and ethical standards during its use.
 
+----
+
+
+### Last Update January 19, 2025, at 3:33 AM
+I recently developed a Burp Suite extension designed to detect leaked data in JavaScript files. The extension focuses on identifying exposed information such as API keys, usage keys, and other sensitive data. In my latest update, made on January 19, 2025, at 3:33 PM, I expanded the keyword list to cover terms from various fields, including secrets and potential leakage indicators, for more accurate and comprehensive detection.
+
+
