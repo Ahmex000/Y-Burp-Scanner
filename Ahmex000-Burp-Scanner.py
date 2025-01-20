@@ -60,10 +60,10 @@ KEYWORDS = {
    # General Secrets
     "affirm_private": "High",
     "secret\"": "High",
-
     # Payment Gateway Keys
     "sk_live": "High",  # Stripe Live Secret Key
     "pk_live": "Medium",  # Stripe Live Public Key
+    "pk-live": "Medium",  # Stripe Live Public Key
     "paypal_client_secret": "High",  # PayPal Client Secret
     "square_access_token": "High",  # Square Access Token
     # Cloud Provider Secrets
@@ -113,19 +113,13 @@ KEYWORDS = {
     # Regex Patterns for Common Secrets
     "SG\\.[a-zA-Z0-9_]{22}\\.[a-zA-Z0-9_-]{43}": "High",  # SendGrid API Key
     "sk_live_[0-9a-zA-Z]{24}": "High",  # Stripe Live Secret Key
+    "pk_live_[0-9a-zA-Z]{24}": "High",  # Stripe Live Secret Key
     "sk_test_[0-9a-zA-Z]{24}": "High",  # Stripe Test Secret Key
     "EAACEdEose0cBA[0-9A-Za-z]+": "High",  # Facebook Access Token
     "ya29\\.[0-9A-Za-z\\-_]+": "High",  # Google OAuth Access Token
     "AIza[0-9A-Za-z\\-_]{35}": "High",  # Google API Key
     "shppa_[0-9a-fA-F]{32}": "High",  # Shopify Private App Access Token
-    '''
-    "xoxb-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{24}": "High",  # Slack Bot Token
-    "xoxp-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{24}": "High",  # Slack User Token
-    "xoxe-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{10}-[0-9a-zA-Z]{24}": "High",  # Slack Legacy Token
- 
-    "ghp_[0-9a-zA-Z]{36}": "High",  # GitHub Personal Access Token
-     "ghs_[0-9a-zA-Z]{36}": "High",  # GitHub Server-to-Server Token
-   '''   
+    "ghs_[0-9a-zA-Z]{36}": "High",  # GitHub Server-to-Server Token   
     "glpat-[0-9a-zA-Z\\-_]{20}": "High",  # GitLab Personal Access Token
     "sq0atp-[0-9A-Za-z\\-_]{22}": "High",  # Square Access Token
     "sq0csp-[0-9A-Za-z\\-_]{43}": "High",  # Square OAuth Secret
@@ -187,7 +181,6 @@ KEYWORDS = {
     "elasticsearch_password": "High",
     "stripe_api_key": "High",
     "paypal_client_secret": "High",
-    "square_access_token": "High",
     "braintree_private_key": "High",
     "adyen_api_key": "High",
     "authorize_net_api_key": "High",
@@ -213,6 +206,27 @@ KEYWORDS = {
     "grafana_api_key": "High",
     # Infrastructure as Code
     "terraform_api_key": "High",
+    "braintree_private_key": "High",
+    "adyen_api_key": "High",
+    "authorize_net_api_key": "High",
+    "worldpay_api_key": "High",
+    "razorpay_api_key": "High",
+    "razorpay_secret_key": "High",
+    "google_pay_api_key": "High",
+    "apple_pay_merchant_id": "High",
+    "wechat_pay_api_key": "High",
+    "alipay_api_key": "High",
+    "klarna_api_key": "High",
+    "paddle_api_key": "High",
+    "2checkout_api_key": "High",
+    "bluesnap_api_key": "High",
+    "payu_api_key": "High",
+    "mollie_api_key": "High",
+    "skrill_api_key": "High",
+    "payoneer_api_key": "High",
+    "transferwise_api_key": "High",
+    "venmo_api_key": "High",
+    "zelle_api_key": "High",
     "pulumi_api_key": "High",
     "ansible_vault_password": "High",
     "chef_server_key": "High",
@@ -235,17 +249,12 @@ KEYWORDS = {
     "development_secret": "High",
     "test_token": "High",
     "pagerduty_api_key=[0-9a-zA-Z]{20}": "High",    # PagerDuty API Key
-    # "secret=\"[^\"]+\"": "High",    # البحث عن secret="أي قيمة"
     "access_token=\"[^\"]+\"": "High",  # البحث عن access_token="أي قيمة"
     "client_secret=\"[^\"]+\"": "High",  # البحث عن client_secret="أي قيمة"
     # JSON Format
     "\"access_token\":\"[^\"]+\"": "High",  # البحث عن "access_token":"أي قيمة"
     "\"client_secret\":\"[^\"]+\"": "High",  # البحث عن "client_secret":"أي قيمة"
     # باقي الكلمات المهمة
-    # "secret": "High",
-    # r"(?<=\w|\d|[-_])private|\bprivate(?=\w|\d|[-_])": "Medium",
-    # "AIza": "High",  # Google API Key
-    # "AC[a-zA-Z0-9]{32}": "High",  # Twilio Account SID
     "key-[0-9a-zA-Z]{32}": "High",  # Mailgun API Key
     "amzn\\.mws\\.[0-9a-zA-Z._%+-]{30,50}": "High",  # Amazon MWS Auth Token
     "dpk_live_[0-9a-zA-Z]{32}": "High",  # Datadog API Key
@@ -438,14 +447,14 @@ KEYWORDS = {
     "Zendesk[_-]?API[_-]?key": "High",# General Secrets
     # folllowing wordkeys added in 18-01-2025 / 11:42
     "X-Rollbar-Access-Token": "High",
-    "bucketingStrategy": "Medium",
+    # "bucketingStrategy": "Medium",
     "Access-Token": "High",
     "AccessToken\"": "High",
-    "GoogleMapsAPIKey": "High",
+    #"GoogleMapsAPIKey": "High",
     r"(?<=\w|\d|[-_\"':])ProjectConfig(?=\w|\d|[-_\"':=])": "Medium",
-    "RECORD_STICKY_BUCKETING_FEATURE": "Medium",
-    "RETOKEN": "High",
-    "SEGMENT_TRIGGER_EXPOSURE_BUCKET": "Medium",
+    #"RECORD_STICKY_BUCKETING_FEATURE": "Medium",
+    # "RETOKEN": "High",
+    #"SEGMENT_TRIGGER_EXPOSURE_BUCKET": "Medium",
     "addParamsAndAccessTokenToPath": "Medium",
     "api-key\"": "High",
     "api-key:": "High",
@@ -453,33 +462,19 @@ KEYWORDS = {
     "apiKey": "High",
     "authToken=": "High",
     "auth-Token": "High",
-    "apiToken": "High",
     "clientSecret": "High",
-    "bluecore_token": "High",
-    "bucketUser": "Medium",
-    "bucketVisitor": "Medium",
-    "bucketingId": "Medium",
-    "bucketingNumber": "Medium",
-    "buildBucketerParams": "Medium",
     "checkoutToken": "High",
     "checkout_token": "High",
-    "exposureBucket": "Medium",
     "getBucketedVariation": "Medium",
-    "getMapboxApiAccessToken": "High",
-    "getProjectToken": "High",
     "hideToken": "Medium",
-    "persistVisitorBucketingStore": "Medium",
     "projectToken": "High",
     "resolveExperimentBucketMap": "Medium",
     "rpctoken": "High",
-    "sentry_key": "High",
     "showToken": "Medium",
     "tokenRegex": "Medium",
     "tokenize": "Medium",
     "tokenizeNode": "Medium",
     "visitor_bucketing": "Medium",
-    # الكلمات المفتاحية القديمة (يمكنك إضافتها كما هي)
-    # r"(?<=\w|\d|[-_])secret|secret(?=\w|\d|[-_])": "High",
     "session_secret": "High",
        "azure_ad_token": "High",
     "google_cloud_token": "High",
@@ -488,12 +483,12 @@ KEYWORDS = {
     "discord_bot_token": "High",
     "whatsapp_api_token": "High",
     "paypal_access_token": "High",
+     "paypal_secret_key": "High",
     "stripe_connect_token": "High",
     "razorpay_key": "High",
     "user_metadata": "Medium",
     "app_metadata": "Medium",
     "device_metadata": "Medium",
-    "tracking_id": "Medium",
     "analytics_token": "Medium",
     "advertising_id": "Medium",
     "ssh_private_key": "High",
@@ -627,15 +622,17 @@ KEYWORDS = {
     "mind_api_token": "High",
     "braze_key": "Medium",
     "behavior_api_token": "High",
-     '''
+     ".sql": "High",
+    ".pptx": "High",
+    ".tar.gz": "High",
+    ".tgz": "High",
+    ".bak": "High"
+    '''
      ".xls": "High",
     ".xml": "High",
     ".xlsx": "High",
     ".json": "High",
     ".pdf": "High",
-    '''
-    ".sql": "High",
-    '''
     ".doc": "High",
     ".docx": "High",
     ".rar": "High",
@@ -644,10 +641,6 @@ KEYWORDS = {
     ".zip": "High",
      ".zip": "High",
     '''
-    ".pptx": "High",
-    ".tar.gz": "High",
-    ".tgz": "High",
-    ".bak": "High"
     }
 
 class CustomScanIssue(IScanIssue):
@@ -707,5 +700,33 @@ class CustomScanIssue(IScanIssue):
 #    // this searches to Slack leaks data due false positive alerts ]
 #----------
 # deleted "password" key word
-# last update 19:01:2025
-
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
