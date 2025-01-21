@@ -59,93 +59,93 @@ class BurpExtender(IBurpExtender, IHttpListener):
 
 KEYWORDS = {
     # General Secrets
-    r"affirm[-_]?private.*": "High",
-    r"private[-_]?token.*": "High",
-    r"auth[-_]?token[-_]?key.*": "High",
-    r"system[-_]?password.*": "High",
-    r"api[-_]?key[-_]?secret.*": "High",
-    r"root[-_]?password.*": "High",
-    r"linode[-_]?api[-_]?key.*": "High",
-    r"vultr[-_]?api[-_]?key.*": "High",
-    r"rackspace[-_]?api[-_]?key.*": "High",
-    r"digitalocean[-_]?secret[-_]?key.*": "High",
-    r"firebase[-_]?private[-_]?key.*": "High",
-    r"gcs[-_]?service[-_]?account[-_]?key.*": "High",
-    r"aws[-_]?security[-_]?token.*": "High",
-    r"circleci[-_]?api[-_]?key.*": "High",
-    r"jenkins[-_]?secret[-_]?key.*": "High",
-    r"travisci[-_]?api[-_]?secret.*": "High",
-    r"teamcity[-_]?token.*": "High",
-    r"tumblr[-_]?oauth[-_]?token.*": "High",
-    r"reddit[-_]?api[-_]?key.*": "High",
-    r"pinterest[-_]?app[-_]?secret.*": "High",
-    r"snap[-_]?api[-_]?key.*": "High",
-    r"acme[-_]?private[-_]?key.*": "High",
-    r"ssl[-_]?private[-_]?key.*": "High",
-    r"vpn[-_]?api[-_]?token.*": "High",
-    r"secret[-_]?token[-_][a-zA-Z0-9_]{32}.*": "High",
-    r"password=[a-zA-Z0-9!@#\$%\^&\*\(\)_\+-=]{8,}.*": "High",
-    r"client[-_]?secret=[a-zA-Z0-9_]{64}.*": "High",
-    r"api[-_]?key=[a-zA-Z0-9_-]{40}.*": "High",
+    r"affirm[-_]?private": "High",
+    r"private[-_]?token": "High",
+    r"auth[-_]?token[-_]?key": "High",
+    r"system[-_]?password": "High",
+    r"api[-_]?key[-_]?secret": "High",
+    r"root[-_]?password": "High",
+    r"linode[-_]?api[-_]?key": "High",
+    r"vultr[-_]?api[-_]?key": "High",
+    r"rackspace[-_]?api[-_]?key": "High",
+    r"digitalocean[-_]?secret[-_]?key": "High",
+    r"firebase[-_]?private[-_]?key": "High",
+    r"gcs[-_]?service[-_]?account[-_]?key": "High",
+    r"aws[-_]?security[-_]?token": "High",
+    r"circleci[-_]?api[-_]?key": "High",
+    r"jenkins[-_]?secret[-_]?key": "High",
+    r"travisci[-_]?api[-_]?secret": "High",
+    r"teamcity[-_]?token": "High",
+    r"tumblr[-_]?oauth[-_]?token": "High",
+    r"reddit[-_]?api[-_]?key": "High",
+    r"pinterest[-_]?app[-_]?secret": "High",
+    r"snap[-_]?api[-_]?key": "High",
+    r"acme[-_]?private[-_]?key": "High",
+    r"ssl[-_]?private[-_]?key": "High",
+    r"vpn[-_]?api[-_]?token": "High",
+    r"secret[-_]?token[-_][a-zA-Z0-9_]{32}": "High",
+    r"password=[a-zA-Z0-9!@#\$%\^&\*\(\)_\+-=]{8,}": "High",
+    r"client[-_]?secret=[a-zA-Z0-9_]{64}": "High",
+    r"api[-_]?key=[a-zA-Z0-9_-]{40}": "High",
 
     # Payment Gateway Keys
-    r"sk[-_]?live.*": "High",  # Stripe Live Secret Key
-    r"pk[-_]?live.*": "Medium",  # Stripe Live Public Key
+    r"sk[-_]?live": "High",  # Stripe Live Secret Key
+    r"pk[-_]?live": "Medium",  # Stripe Live Public Key
     r"stripe_api_key": "High",  # Stripe API Key
     r"sk_[live|test]_[0-9a-zA-Z]{24}": "High",  # Stripe API Key
     r"Stripe[_-]?Live[_-]?Token": "High",  # Stripe Live Token
-    r"paypal[-_]?client[-_]?secret.*": "High",  # PayPal Client Secret
-    r"square[-_]?access[-_]?token.*": "High",  # Square Access Token
+    r"paypal[-_]?client[-_]?secret": "High",  # PayPal Client Secret
+    r"square[-_]?access[-_]?token": "High",  # Square Access Token
 
     # Cloud Provider Secrets
-    r"aws[-_]?access[-_]?key[-_]?id.*": "High",  # aws_access_key_id
-    r"aws[-_]?secret[-_]?access[-_]?key.*": "High",  # aws_secret_access_key
-    r"aws[-_]?session[-_]?token.*": "High",  # aws_session_token
-    r"gcp[-_]?service[-_]?account[-_]?key.*": "High",  # gcp_service_account_key
-    r"secret[-_]?key.*|secretKey.*": "High",  # secret_key or secretKey
-    r"azure[-_]?storage[-_]?account[-_]?key.*": "High",  # azure_storage_account_key
-    r"digitalocean[-_]?token.*": "High",  # digitalocean_token
-    r"heroku[-_]?api[-_]?key.*": "High",  # heroku_api_key
+    r"aws[-_]?access[-_]?key[-_]?id": "High",  # aws_access_key_id
+    r"aws[-_]?secret[-_]?access[-_]?key": "High",  # aws_secret_access_key
+    r"aws[-_]?session[-_]?token": "High",  # aws_session_token
+    r"gcp[-_]?service[-_]?account[-_]?key": "High",  # gcp_service_account_key
+    r"secret[-_]?key|secretKey": "High",  # secret_key or secretKey
+    r"azure[-_]?storage[-_]?account[-_]?key": "High",  # azure_storage_account_key
+    r"digitalocean[-_]?token": "High",  # digitalocean_token
+    r"heroku[-_]?api[-_]?key": "High",  # heroku_api_key
 
     # Database Credentials
-    r"db[-_]?password.*": "High",  # db_password
-    r"database[-_]?url.*": "High",  # database_url
-    r"mongodb[-_]?uri.*": "High",  # mongodb_uri
-    r"postgresql[-_]?url.*": "High",  # postgresql_url
-    r"mysql[-_]?password.*": "High",  # mysql_password
+    r"db[-_]?password": "High",  # db_password
+    r"database[-_]?url": "High",  # database_url
+    r"mongodb[-_]?uri": "High",  # mongodb_uri
+    r"postgresql[-_]?url": "High",  # postgresql_url
+    r"mysql[-_]?password": "High",  # mysql_password
 
     # Social Media Tokens
-    r"facebook[-_]?access[-_]?token.*": "High",  # facebook_access_token
-    r"twitter[-_]?api[-_]?key.*": "High",  # twitter_api_key
-    r"instagram[-_]?access[-_]?token.*": "High",  # instagram_access_token
-    r"linkedin[-_]?api[-_]?key.*": "High",  # linkedin_api_key
+    r"facebook[-_]?access[-_]?token": "High",  # facebook_access_token
+    r"twitter[-_]?api[-_]?key": "High",  # twitter_api_key
+    r"instagram[-_]?access[-_]?token": "High",  # instagram_access_token
+    r"linkedin[-_]?api[-_]?key": "High",  # linkedin_api_key
 
     # Version Control Tokens
-    r"github[-_]?token.*": "High",  # github_token
-    r"gitlab[-_]?token.*": "High",  # gitlab_token
-    r"bitbucket[-_]?token.*": "High",  # bitbucket_token
+    r"github[-_]?token": "High",  # github_token
+    r"gitlab[-_]?token": "High",  # gitlab_token
+    r"bitbucket[-_]?token": "High",  # bitbucket_token
 
     # CI/CD Secrets
-    r"circleci[-_]?token.*": "High",  # circleci_token
-    r"travisci[-_]?token.*": "High",  # travisci_token
-    r"jenkins[-_]?token.*": "High",  # jenkins_token
+    r"circleci[-_]?token": "High",  # circleci_token
+    r"travisci[-_]?token": "High",  # travisci_token
+    r"jenkins[-_]?token": "High",  # jenkins_token
 
     # Messaging Services
-    r"slack[-_]?api[-_]?token.*": "High",  # slack_api_token
-    r"slack[-_]?webhook[-_]?url.*": "High",  # slack_webhook_url
-    r"twilio[-_]?auth[-_]?token.*": "High",  # twilio_auth_token
-    r"sendgrid[-_]?api[-_]?key.*": "High",  # sendgrid_api_key
+    r"slack[-_]?api[-_]?token": "High",  # slack_api_token
+    r"slack[-_]?webhook[-_]?url": "High",  # slack_webhook_url
+    r"twilio[-_]?auth[-_]?token": "High",  # twilio_auth_token
+    r"sendgrid[-_]?api[-_]?key": "High",  # sendgrid_api_key
 
     # Other Common Secrets
-    r"encryption[-_]?key.*": "High",  # encryption_key
-    r"private[-_]?key.*": "High",  # private_key
-    r"public[-_]?key.*": "High",  # public_key
-    r"ssh[-_]?key.*": "High",  # ssh_key
-    r"pgp[-_]?key.*": "High",  # pgp_key
-    r"rsa[-_]?key.*": "High",  # rsa_key
-    r"ssl[-_]?certificate.*": "High",  # ssl_certificate
-    r"jwt[-_]?secret.*": "High",  # jwt_secret
-    r"session[-_]?secret.*": "High",  # session_secret
+    r"encryption[-_]?key": "High",  # encryption_key
+    r"private[-_]?key": "High",  # private_key
+    r"public[-_]?key": "High",  # public_key
+    r"ssh[-_]?key": "High",  # ssh_key
+    r"pgp[-_]?key": "High",  # pgp_key
+    r"rsa[-_]?key": "High",  # rsa_key
+    r"ssl[-_]?certificate": "High",  # ssl_certificate
+    r"jwt[-_]?secret": "High",  # jwt_secret
+    r"session[-_]?secret": "High",  # session_secret
 
     # Regex Patterns for Common Secrets
     r"SG\.[a-zA-Z0-9_]{22}\.[a-zA-Z0-9_-]{43}": "High",  # SendGrid API Key
@@ -276,7 +276,7 @@ KEYWORDS = {
     r"sonarqube_token": "High",  # SonarQube Token
     r"snyk_api_key": "High",  # Snyk API Key
     r"nessus_api_key": "High",  # Nessus API Key
-    r"affirm[-_]?Public.*": "High",  # Affirm Public
+    r"affirm[-_]?Public": "High",  # Affirm Public
     r"internal_api_key": "High",  # Internal API Key
     r"production_db_password": "High",  # Production DB Password
     r"staging_api_key": "High",  # Staging API Key
@@ -407,7 +407,7 @@ KEYWORDS = {
     r"rpctoken": "High",  # RPC Token
     r"showToken": "Medium",  # Show Token
     r"tokenRegex": "Medium",  # Token Regex
-    r"tokenize": "Medium",  # Tokenize
+    # r"tokenize": "Medium",  # Tokenize
     r"tokenizeNode": "Medium",  # Tokenize Node
     r"visitor_bucketing": "Medium",  # Visitor Bucketing
     r"session_secret": "High",  # Session Secret
@@ -432,7 +432,7 @@ KEYWORDS = {
     r"mongodb_password": "High",  # MongoDB Password
     r"cassandra_password": "High",  # Cassandra Password
     r"local_storage_token": "High",  # Local Storage Token
-    r"session_cookie": "High",  # Session Cookie
+    # r"session_cookie": "High",  # Session Cookie
     r"local_auth_token": "High",  # Local Auth Token
     r"mobile_app_token": "High",  # Mobile App Token
     r"ios_app_key": "High",  # iOS App Key
@@ -634,4 +634,8 @@ class CustomScanIssue(IScanIssue):
 #    // this searches to Slack leaks data due false positive alerts ]
 #----------
 # deleted "password" key word
+# another upadte , just change .* after many regex pattern , couse that may use alotof PC resources : 2025-01-21 : 06:55 
+#
+#
+#
 #
