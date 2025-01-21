@@ -14,7 +14,7 @@ class BurpExtender(IBurpExtender, IHttpListener):
         # تسجيل Listener للاستماع إلى جميع الطلبات والاستجابات
         self._callbacks.registerHttpListener(self)
         
-        print("Auto Sensitive Keyword Scanner loaded!")
+        print("Ahmex000 Scanner loaded!")
 
     def processHttpMessage(self, toolFlag, messageIsRequest, messageInfo):
         # نريد فقط تحليل الاستجابات (Responses) وليس الطلبات (Requests)
