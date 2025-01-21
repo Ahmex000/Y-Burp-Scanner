@@ -134,7 +134,6 @@ KEYWORDS = {
     "github_token=[0-9a-zA-Z]{40}": "High",  # GitHub Token
     "bitbucket_token=[0-9a-zA-Z]{40}": "High",  # Bitbucket Token
     "digitalocean_token=[0-9a-zA-Z]{64}": "High",  # DigitalOcean Token
-    "aws_secret_access_key=[0-9a-zA-Z/+=]{40}": "High",  # AWS Secret Access Key
     "gcp_service_account_key=[0-9a-zA-Z-_]{64}": "High",  # GCP Service Account Key
     "azure_storage_account_key=[0-9a-zA-Z+/=]{88}": "High",  # Azure Storage Account Key
     "twilio_auth_token=[0-9a-fA-F]{32}": "High",  # Twilio Auth Token
@@ -148,14 +147,27 @@ KEYWORDS = {
     "shopify_api_key=[0-9a-zA-Z]{32}": "High",  # Shopify API Key  # PayPal Client Secret
     "dropbox_api_key=[0-9a-zA-Z]{15}": "High",  # Dropbox API Key
     "box_api_key=[0-9a-zA-Z]{32}": "High",  # Box API Key
+        "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}": "High",
+    "s3\\.amazonaws.com[/]+|[a-zA-Z0-9_-]*\\.s3\\.amazonaws.com": "Medium",
+    "([a-zA-Z0-9-\\.\\_]+\\.s3\\.amazonaws\\.com|s3://[a-zA-Z0-9-\\.\\_]+|s3-[a-zA-Z0-9-\\.\\_\\/]+|s3.amazonaws.com/[a-zA-Z0-9-\\.\\_]+|s3.console.aws.amazon.com/s3/buckets/[a-zA-Z0-9-\\.\\_]+)": "Medium",
+    "EAACEdEose0cBA[0-9A-Za-z]+": "High",
     "asana_access_token=[0-9a-zA-Z]{32}": "High",  # Asana Access Token
     "trello_api_key=[0-9a-zA-Z]{32}": "High",  # Trello API Key
     "jira_api_token=[0-9a-zA-Z]{24}": "High",  # Jira API Token
     "datadog_api_key=[0-9a-zA-Z]{32}": "High",  # Datadog API Key
     "newrelic_api_key=[0-9a-zA-Z]{40}": "High",  # New Relic API Key
+        "-----BEGIN RSA PRIVATE KEY-----": "High",
+    "-----BEGIN DSA PRIVATE KEY-----": "High",
+        "sq0csp-[ 0-9A-Za-z\\-_]{43}|sq0[a-z]{3}-[0-9A-Za-z\\-_]{22,43}": "High",
+    "sqOatp-[0-9A-Za-z\\-_]{22}|EAAA[a-zA-Z0-9]{60}": "High",
+    "-----BEGIN EC PRIVATE KEY-----": "High",
+    "-----BEGIN PGP PRIVATE KEY BLOCK-----": "High",
+        "access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}": "High",
     "pagerduty_api_key=[0-9a-zA-Z]{20}": "High",  # PagerDuty API Key
     "api_key\"": "High",
     "api_key:": "High",
+        "\"api_token\":\"(xox[a-zA-Z]-[a-zA-Z0-9-]+)\"": "High",
+    "([-]+BEGIN [^\\s]+ PRIVATE KEY[-]+[\\s]*[^-]*[-]+END [^\\s]+ PRIVATE KEY[-]+)": "High",
     "api_key :": "High",
     "api_secret": "High",
     "access_token": "High",
