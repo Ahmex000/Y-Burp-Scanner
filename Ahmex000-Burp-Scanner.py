@@ -140,14 +140,12 @@ KEYWORDS = {
     "twilio_auth_token=[0-9a-fA-F]{32}": "High",  # Twilio Auth Token
     "sendgrid_api_key=[0-9a-zA-Z]{69}": "High",  # SendGrid API Key
     "mailgun_api_key=[0-9a-zA-Z]{32}": "High",  # Mailgun API Key
-    "stripe_api_key=[0-9a-zA-Z]{24}": "High",  # Stripe API Key
     "github_client_secret=[0-9a-zA-Z]{40}": "High",  # GitHub Client Secret
     "facebook_app_secret=[0-9a-zA-Z]{32}": "High",  # Facebook App Secret
     "twitter_api_secret=[0-9a-zA-Z]{40}": "High",  # Twitter API Secret
     "google_api_key=[0-9A-Za-z-_]{35}": "High",  # Google API Key
     "slack_signing_secret=[0-9a-zA-Z]{32}": "High",  # Slack Signing Secret
-    "shopify_api_key=[0-9a-zA-Z]{32}": "High",  # Shopify API Key
-    "paypal_client_secret=[0-9a-zA-Z]{64}": "High",  # PayPal Client Secret
+    "shopify_api_key=[0-9a-zA-Z]{32}": "High",  # Shopify API Key  # PayPal Client Secret
     "dropbox_api_key=[0-9a-zA-Z]{15}": "High",  # Dropbox API Key
     "box_api_key=[0-9a-zA-Z]{32}": "High",  # Box API Key
     "asana_access_token=[0-9a-zA-Z]{32}": "High",  # Asana Access Token
@@ -169,6 +167,24 @@ KEYWORDS = {
     "refresh_token:": "High",
     "refresh_token :": "High",
     "oauth_token": "High",
+     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\\.[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+": "High",
+    "Bearer [a-zA-Z0-9_-]{64}": "High",
+    "oauth_token=\"[a-zA-Z0-9_-]{64}\"": "High",
+    "client_secret=\"[a-zA-Z0-9_-]{40}\"": "High",
+    "postgres://[a-zA-Z0-9_-]+:[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+": "High",
+    "mysql://[a-zA-Z0-9_-]+:[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+": "High",
+    "mongodb://[a-zA-Z0-9_-]+:[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+": "High",
+    "AWS_ACCESS_KEY_ID=\"[A-Z0-9]{20}\"": "High",
+    "AWS_SECRET_ACCESS_KEY=\"[a-zA-Z0-9/+]{40}\"": "High",
+    "AZURE_STORAGE_KEY=\"[a-zA-Z0-9/+]{88}\"": "High",
+    "facebook_access_token=\"[a-zA-Z0-9_-]{128}\"": "High",
+    "instagram_access_token=\"[a-zA-Z0-9_-]{128}\"": "High",
+    "square_access_token=\"sq0atp-[a-zA-Z0-9_-]{22}\"": "High",
+    "encryption_key=\"[a-zA-Z0-9_-]{64}\"": "High",
+    "private_key=\"-----BEGIN RSA PRIVATE KEY-----\"": "High",
+    "password=\"[a-zA-Z0-9_-]{8,}\"": "High",
+    "secret=\"[a-zA-Z0-9_-]{32}\"": "High",
+    "auth=\"[a-zA-Z0-9_-]{64}\"": "High",
     "bearer_token": "High",
     "client_secret": "High",
     "session_token": "High",
@@ -180,7 +196,6 @@ KEYWORDS = {
     "cassandra_password": "High",
     "elasticsearch_password": "High",
     "stripe_api_key": "High",
-    "paypal_client_secret": "High",
     "braintree_private_key": "High",
     "adyen_api_key": "High",
     "authorize_net_api_key": "High",
@@ -206,12 +221,6 @@ KEYWORDS = {
     "grafana_api_key": "High",
     # Infrastructure as Code
     "terraform_api_key": "High",
-    "braintree_private_key": "High",
-    "adyen_api_key": "High",
-    "authorize_net_api_key": "High",
-    "worldpay_api_key": "High",
-    "razorpay_api_key": "High",
-    "razorpay_secret_key": "High",
     "google_pay_api_key": "High",
     "apple_pay_merchant_id": "High",
     "wechat_pay_api_key": "High",
@@ -220,13 +229,13 @@ KEYWORDS = {
     "paddle_api_key": "High",
     "2checkout_api_key": "High",
     "bluesnap_api_key": "High",
+    "froalaEditorActivationKey": "High",
     "payu_api_key": "High",
     "mollie_api_key": "High",
     "skrill_api_key": "High",
     "payoneer_api_key": "High",
     "transferwise_api_key": "High",
     "venmo_api_key": "High",
-    "zelle_api_key": "High",
     "pulumi_api_key": "High",
     "ansible_vault_password": "High",
     "chef_server_key": "High",
@@ -485,7 +494,6 @@ KEYWORDS = {
     "paypal_access_token": "High",
      "paypal_secret_key": "High",
     "stripe_connect_token": "High",
-    "razorpay_key": "High",
     "user_metadata": "Medium",
     "app_metadata": "Medium",
     "device_metadata": "Medium",
