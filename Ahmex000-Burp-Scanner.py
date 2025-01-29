@@ -94,6 +94,7 @@ KEYWORDS = {
     r"stripe_api_key": "High",  # Stripe API Key
     r"sk_[live|test]_[0-9a-zA-Z]{24}": "High",  # Stripe API Key
     r"Stripe[_-]?Live[_-]?Token": "High",  # Stripe Live Token
+    "stripeAccountId": "Medium",
     r"paypal[-_]?client[-_]?secret": "High",  # PayPal Client Secret
     r"square[-_]?access[-_]?token": "High",  # Square Access Token
 
@@ -391,8 +392,6 @@ KEYWORDS = {
     r"AccessToken\"": "High",  # Access Token
     r"(?<=\w|\d|[-_\"':])ProjectConfig(?=\w|\d|[-_\"':=])": "Medium",  # Project Config
     r"addParamsAndAccessTokenToPath": "Medium",  # Add Params and Access Token to Path
-    r"api-key\"": "High",  # API Key
-    r"api-key:": "High",  # API Key
     r"api-key :": "High",  # API Key
     r"apiKey": "High",  # API Key
     r"authToken=": "High",  # Auth Token
@@ -400,7 +399,7 @@ KEYWORDS = {
     r"clientSecret": "High",  # Client Secret
     r"checkoutToken": "High",  # Checkout Token
     r"checkout_token": "High",  # Checkout Token
-    r"getBucketedVariation": "Medium",  # Get Bucketed Variation
+    #r"getBucketedVariation": "Medium",  # Get Bucketed Variation
     r"hideToken": "Medium",  # Hide Token
     r"projectToken": "High",  # Project Token
     r"resolveExperimentBucketMap": "Medium",  # Resolve Experiment Bucket Map
@@ -554,13 +553,14 @@ KEYWORDS = {
     r"wisdom_api_token": "High",  # Wisdom API Token
     r"psychology_api_key": "High",  # Psychology API Key
     r"mind_api_token": "High",  # Mind API Token
-    r"braze_key": "Medium",  # Braze Key
+    r"braze[-_]?(key|api[-_]?key|token)": "Medium",
+    r"braze[-_]?(private[-_]?key|key|api[-_]?key|token)": "Medium",
     r"behavior_api_token": "High",  # Behavior API Token
     r".sql": "High",  # SQL Files
     r".pptx": "High",  # PPTX Files
     r".tar.gz": "High",  # TAR.GZ Files
     r".tgz": "High",  # TGZ Files
-    r".bak": "High"  # BAK Files
+    r".bak": "High",  # BAK Files
    '''
     r".xls": "High",  # XLS Files
     r".xml": "High",  # XML Files
@@ -574,6 +574,46 @@ KEYWORDS = {
     r".txt": "High",  # TXT Files
     r".zip": "High",  # ZIP Files
     '''
+     r"\.txt$": "Low",
+    r"\.log$": "Low",
+    r"\.cache$": "Low",
+    r"\.secret$": "High",
+    r"\.db$": "High",
+    r"\.backup$": "High",
+    r"\.yml$": "Medium",
+    r"\.json$": "Medium",
+    r"\.gz$": "Medium",
+    r"\.rar$": "Medium",
+    r"\.zip$": "Medium",
+    r"\.tar$": "Medium",
+    r"\.sql$": "High",
+    r"\.env$": "High",
+    r"\.config$": "Medium",
+    r"\.conf$": "Medium",
+    r"\.ini$": "Medium",
+    r"\.htaccess$": "High",
+    r"\.htpasswd$": "High",
+    r"\.pem$": "High",
+    r"\.key$": "High",
+    r"\.crt$": "High",
+    r"\.cer$": "High",
+    r"\.pfx$": "High",
+    r"\.p12$": "High",
+    r"\.swp$": "Low",
+    r"\.bak$": "Medium",
+    r"\.old$": "Medium",
+    r"\.tmp$": "Low",
+    r"\.temp$": "Low",
+    r"\.dump$": "High",
+    r"\.passwd$": "High",
+    r"\.shadow$": "High",
+    r"\.git$": "High",
+    r"\.svn$": "High",
+    r"\.DS_Store$": "Low",
+    r"\.idea$": "Low",
+    r"\.vscode$": "Low",
+    r"\.bash_history$": "High",
+    r"\.zsh_history$": "High"
 }
     
 
@@ -634,8 +674,4 @@ class CustomScanIssue(IScanIssue):
 #    // this searches to Slack leaks data due false positive alerts ]
 #----------
 # deleted "password" key word
-# another upadte , just change .* after many regex pattern , couse that may use alotof PC resources : 2025-01-21 : 06:55 
-#
-#
-#
 #
