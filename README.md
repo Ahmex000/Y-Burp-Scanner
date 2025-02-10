@@ -65,4 +65,7 @@ This extension is a tool to assist penetration testers in identifying potential 
 ### Last Update January 19, 2025, at 3:33 AM
 I recently developed a Burp Suite extension designed to detect leaked data in JavaScript files. The extension focuses on identifying exposed information such as API keys, usage keys, and other sensitive data. In my latest update, made on January 19, 2025, at 3:33 PM, I expanded the keyword list to cover terms from various fields, including secrets and potential leakage indicators, for more accurate and comprehensive detection.
 
+---
 
+### Hi , after many updates : 
+- Hi , after many updates in my extention i found that , sometimes new version have some issuues or dont work good as bast one , so in the future i will add new version in another file to be sure that all version's as options & to be able to compare extention version's
