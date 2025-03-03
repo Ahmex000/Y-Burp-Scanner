@@ -1,4 +1,4 @@
-### Ahmex000-Burp-Scanner
+### Y-Burp-Scanner
 
 This Burp Suite extension is designed to automatically detect sensitive keywords in HTTP responses during penetration testing. By identifying potential sensitive data leaks, it assists penetration testers in quickly uncovering vulnerabilities.
 
