@@ -56,10 +56,8 @@ Feel free to submit pull requests to enhance the functionality, add new features
 
 ---
 
-### Disclaimer
-This extension is a tool to assist penetration testers in identifying potential data leaks. It is the responsibility of the tester to ensure compliance with legal and ethical standards during its use.
-
-----
+## 📫 Contact
+Have questions or suggestions? Feel free to open an issue or reach out via x.com/Ahmex000 . Happy hunting! 🐛🔍
 
 
 ### Last Update January 19, 2025, at 3:33 AM
